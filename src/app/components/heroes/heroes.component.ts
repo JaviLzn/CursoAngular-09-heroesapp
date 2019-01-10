@@ -1,3 +1,5 @@
+import { Heroe } from './../../interfaces/heroe.interface';
+import { HeroesService } from './../../services/heroes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  constructor() { }
+
+  constructor( private _heroesService: HeroesService) { }
 
   ngOnInit() {
   }
+
+
 
 }
