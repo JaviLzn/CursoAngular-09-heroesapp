@@ -45,4 +45,15 @@ export class HeroesService {
             return res.json();
           })
   }
+
+  obtenerHeroe( key$: string) {
+
+
+    const url = `${ this.heroeURL }${key$}.json`;
+
+    return this.http.get(url)
+          .map ( res => res.json());
+  }
+
+
 }
