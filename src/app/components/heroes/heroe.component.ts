@@ -25,7 +25,7 @@ export class HeroeComponent implements OnInit {
                private router: Router,
                private route: ActivatedRoute) {
                  this.route.params.subscribe( parametros => {
-                   this.id = parametros['id']
+                   this.id = parametros['id'];
 
                    if ( this.id !== 'nuevo') {
                      this._heroesService.obtenerHeroe ( this.id ).subscribe( data => this.heroe = data);

@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 
 // services
 import { HeroesService } from './services/heroes.service';
-
+// Pipes
+import { KeysPipe } from './pipes/keys.pipe';
+// Components
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroes/heroe.component';
@@ -15,7 +17,8 @@ import { APP_ROUTING } from './app.routes';
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
