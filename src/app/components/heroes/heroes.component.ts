@@ -11,10 +11,17 @@ export class HeroesComponent implements OnInit {
 
   heroes: any;
 
+  loading: boolean = true;
+
   constructor( private _heroesService: HeroesService) {
     this._heroesService.obtenerHeroes().subscribe(data => {
-      console.log(data);
-      this.heroes = data;
+      // console.log(data);
+
+
+      setTimeout(() => {
+        this.loading = false;
+        this.heroes = data;
+      }, 1000);
     });
   }
 
